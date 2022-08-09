@@ -1,0 +1,24 @@
+// Rectangle at the lower right corner of 32 wide and 100 pixels long
+
+  address = 21374        //Starting address for lower right rectangle
+  n = RAM[0]
+  i = 0
+
+ LOOP:
+  if i > n goto END
+
+  RAM[address] = -1
+  RAM[address+1] = -1
+  i = i+1
+  address = address + 32   // moves to next row
+  goto LOOP
+
+ END:
+  goto END
+
+
+
+
+
+
+
