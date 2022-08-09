@@ -1,0 +1,50 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/04/Fill.asm
+
+// Runs an infinite loop that listens to the keyboard input.
+// When a key is pressed (any key), the program blackens the screen,
+// i.e. writes "black" in every pixel;
+// the screen should remain fully black as long as the key is pressed. 
+// When no key is pressed, the program clears the screen, i.e. writes
+// "white" in every pixel;
+// the screen should remain fully clear as long as no key is pressed.
+
+// Put your code here.
+@24576 // Used to get 24576
+D=A // Pass 24576 to D Register
+
+@21 // Just a variable
+M=D // Put the value of D into RAM[21]
+
+(LOOP) // Start Loop here
+
+@KBD // Base address of Keyboard Memory Map
+D=M // Get the scan code and pass it to S
+
+
+@10 // Variable
+D;JGT // If D (scan code) is greater than 0 go to line 10
+
+@LOOP // Loop from here
+0;JMP // unconditional loop
+
+@SCREEN // Get base address of Screen Memory Map. This is the 10th line
+D=A // Store that in D Register
+
+(MOMO) // Start Loop here
+@fill // A variable -- also a pointer
+A=D // Pass the value in D to A
+M=-1 // Set value of M to -1 to turn on the pixels
+A=D+1 // Increment A
+D=A // Pass the incremented value to D
+
+@21 // We declared this variable before. Its used to get 24576
+D-M;JEQ  // Here if D-24576 is equal to 0 then jump to line 21
+
+@MOMO // Go to (MOMO)
+0;JMP // This is an unconditional loop.
+
+@21 // Here is line 21
+0;JMP // Infinite loop

@@ -1,0 +1,46 @@
+//program 16 pix wid top right.asm
+
+@22975
+D=A
+
+@addr
+M=D  //addr=22975
+
+@0
+D=M
+
+@n
+M=D  //n=RAM[0]
+
+@i
+M=0
+
+(loop)
+@i
+D=M
+
+@n
+D=D-M
+
+@end
+D;JGT  //if i>n go to end
+
+@addr
+A=M
+M=-1   //RAM[addr]=11111
+
+@i
+M=M+1  //i=i+1
+
+@32
+D=A
+
+@addr
+M=D+M  //addr=addr+32
+
+@loop
+0;JMP  //go to loop
+
+(end)
+@end
+0;JMP
