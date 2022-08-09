@@ -1,0 +1,39 @@
+class Main {
+     function void main() {
+     var char mpt1;
+     var char mpt2;
+     var int i,j;  // We took these 2 variable  integer symbols to perform in loop 
+     var String firstword,secondword,out1,out2;  // first 2 string variables store the input word we gives and the remaining 2 to store the reversed output of word
+
+   let firstword = Keyboard.readLine("firstword: ");
+   let secondword = Keyboard.readLine("secondword: ");
+   let out1 = String.new(firstword.length());
+   let out2 = String.new(secondword.length());
+	
+	do Output.println();
+   let i = firstword.length()-1;
+   while (i > 0)
+   {
+     let mpt1 = firstword.charAt(i);
+     do out1.appendChar(mpt1);
+     let i = i - 1;                   // This while loop is used to store each letter of the word in the reverse order 
+}
+      do out1.appendChar(firstword.charAt(i));
+	do Output.printString("Reversed firstword: ");	
+	do Output.printString(out1);
+      do Output.println();           // This is to print the reversed word which we stored in the out1
+
+ let j = secondword.length()-1;
+   while (j > 0)
+   {
+     let mpt2 = secondword.charAt(j);
+     do out2.appendChar(mpt2);
+     let j = j - 1;
+     
+}
+      do out2.appendChar(secondword.charAt(j));
+	do Output.printString("Reversed secondword: ");
+	do Output.printString(out2);                     //Same method with another word
+return;
+  }
+}

@@ -1,0 +1,84 @@
+class Keyboard {
+    static Array keyboard;
+    field int input;
+    
+    
+    /** Initializes the keyboard. */
+    constructor Keyboard new(){
+        return this;
+    }
+
+    function void init() {
+        let keyboard = 24576;            
+        return;
+    } 
+
+    
+    function char KeyPressed() {
+        return keyboard[0];
+		}
+
+	function char readChar() {
+        var char k;
+        while( Keyboard.KeyPressed() = 0 ) {}
+			let k = Keyboard.KeyPressed();
+			
+        while( ~(Keyboard.KeyPressed() = 0) ) {}
+			
+        return k;  
+    }
+	
+	function String readLine(String itxt) {
+	
+		var String val;
+		var char c;
+
+		let val =String.new(69);
+		let c = 0;
+		
+		do Output.printString(itxt);
+
+		while (~(c=128)) {
+			let c = Keyboard.readChar();
+			if (c=129){
+				do val.eraseLastChar();
+				do Output.printChar(129);
+			}
+			else{
+				do Output.printChar(c);
+				do val.appendChar(c);
+			}	
+		}
+		do val.eraseLastChar();
+		return val;
+	}
+	
+	function int readInt(String itxt) {
+	
+		var String val;
+		var Int ival;
+		var char c;
+
+		let val =String.new(69);
+		let c = 0;
+		
+		do Output.printString(itxt);
+
+		while (~(c=128)) {
+			let c = Keyboard.readChar();
+			if (c=129){
+				do val.eraseLastChar();
+				do Output.printChar(c);
+				
+			}
+			else{
+				do val.appendChar(c);
+				do Output.printChar(c);
+			}	
+		}
+		do val.eraseLastChar();
+		let ival=val.intValue();
+		return ival;
+	}
+
+}

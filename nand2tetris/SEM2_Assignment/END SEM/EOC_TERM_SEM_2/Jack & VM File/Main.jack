@@ -1,0 +1,111 @@
+class Main {
+    function void main(){
+        var int Keys;
+        var int input;
+        var Keyboard keyboard;
+        var boolean run;
+        var String a;
+        var String s;
+        var int integer;
+		
+		// let keyboard = Keyboard.new();
+
+    let run = false;
+    do Output.printString("PROGRAM FOR READING CHARACTERS FROM THE KEYBOARD.");
+    do Output.println();
+    do Output.printString("Please press 'ESC' to move to the next step.");
+    do Output.println();
+    do Output.println();
+    do Output.printString("Keep pressing any key to start.");
+    do Output.println();    
+    do Output.println(); 
+    let Keys = Keyboard.KeyPressed(); 
+        do Sys.wait(1000);
+        do Output.printString("The ASCII of currently pressed key is: ");
+        do Output.printInt(Keys);
+        do Output.println();
+         
+    while(~run) {
+        
+        do Sys.wait(500);
+        do Output.println();
+        let input = Keyboard.readChar();
+        do Output.println();
+        do Sys.wait(100);
+        do Output.printString("New character pressed is: ");
+        do Output.printChar(input);
+        do Output.println();
+        do Sys.wait(100);
+        do Output.printString("The ASCII of this character is: ");
+        do Output.printInt(input);
+        do Output.println();
+        
+
+         if (input = 140) {
+            do Sys.wait(100);
+            do Output.println();
+            do Output.printString("Moving to read string from user.");
+            do Sys.wait(1000);
+            do Screen.clearScreen();
+            do Output.moveCursor(0,0);
+            let run = true;
+         }
+
+    }
+
+        let run = false;
+        do Output.printString("PROGRAM FOR READING STRING FROM THE KEYBOARD.");
+        do Output.println();
+        do Output.printString("Please press 'ESC' to move to the next step.");
+        do Output.println();
+         do Output.println();
+        let input = 0;
+        
+        while (~run) {
+    	    let s = Keyboard.readLine("Please enter the string: ");
+            do Output.println();
+            do Output.printString(s);
+            do Output.println();
+            let input = Keyboard.readChar();
+            do Output.println();
+    
+         if (input = 140) {
+            do Sys.wait(100);
+            do Output.println();
+            do Output.println();
+            do Output.printString("Moving to read integer from user.");
+            do Sys.wait(1000);
+            do Screen.clearScreen();
+            do Output.moveCursor(0,0);
+            let run = true;
+         }
+    	}
+
+        let run = false;
+        do Output.printString("PROGRAM FOR READING INTEGER FROM THE KEYBOARD.");
+        do Output.println();
+        do Output.println();
+        
+        while (~run) {
+            do Output.println();
+    	    let integer = Keyboard.readInt("Please enter the integer: ");
+            do Output.println();
+            do Output.printInt(integer);
+            let input = Keyboard.readChar();
+            do Output.println();
+
+             
+         if (input = 140) {
+            do Sys.wait(1000);
+            do Output.println();
+            do Output.println();
+            do Output.printString("Thank you for using this program.");
+            let run = true;
+         }
+    	}
+        
+        return;
+
+	    }
+        
+    }

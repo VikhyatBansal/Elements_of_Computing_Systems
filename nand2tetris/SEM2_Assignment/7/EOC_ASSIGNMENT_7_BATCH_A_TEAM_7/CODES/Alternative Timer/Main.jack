@@ -1,0 +1,27 @@
+class Main  {
+function void main() {
+  var int k;
+  let k=1;
+
+
+  while (true) {
+        if (k=31){
+         let k=0;
+         do Screen.clearScreen();
+}
+
+do Output.printInt(k);
+do Output.printString(" ");
+do Sys.wait(1000);
+
+if (k=0) {
+ do Sys.halt();
+}
+
+let k=k+1;
+}
+
+return;
+
+  }
+}

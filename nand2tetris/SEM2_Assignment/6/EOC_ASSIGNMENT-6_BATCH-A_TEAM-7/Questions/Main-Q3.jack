@@ -1,0 +1,103 @@
+class Main {
+   function void main() {
+      var Array a, b;
+      var int length; 
+      var int x, i, sum;
+      var int result;
+      
+	let length = Keyboard.readInt("Number elements in a array ");
+        
+	let a = Array.new(length);
+	let i = 0;
+        let x = 10;
+
+	while (i < length) {
+	    let a[i] = Keyboard.readInt("Enter the elements of array: ");
+	    let i = i + 1;
+	}
+
+        let b = Main.mergesort(a, 0, length - 1);
+  
+        let x = Keyboard.readInt("Enter the number to be searched: ");
+
+        let result = Main.binarySearch(b, x, length);
+
+	if (result = -1 ) {
+	    do Output.printString("Element is not found");
+	}
+
+	else {
+	    do Output.printString("Element is found at index:");
+            do Output.printInt(result);
+	}
+      return;
+   }
+
+    function int binarySearch(Array a, int target, int length){
+        var int left;
+        var int right;
+        var int mid;
+
+        let left = 0;
+        let right = length;
+        let mid = 0;
+
+        while (left < right) {
+
+            let mid = ((left + right) / 2);
+
+             if (target = a[mid]) {
+                return mid;
+           }
+
+             if (target < a[mid]) {
+                let right = mid - 1;
+                let left = left - 1;
+                
+           }
+
+             if (target > a[mid]) {
+                let left = mid + 1;
+                let right = right+1;
+           }
+
+          }
+           return -1;
+        }
+
+    function int partition(Array arr, int low, int high) {
+        var int pivot, i, j;
+        var int temp;
+
+        let pivot = arr[high];
+        let i = low - 1;
+        let j = low;
+
+        while (j < high) {
+            if (arr[j] < pivot) {
+                let i = i + 1;
+                let temp = arr[i];
+                let arr[i] = arr[j];
+                let arr[j] = temp;
+            }
+            let j = j + 1;
+        }
+
+        let temp = arr[i + 1];
+        let arr[i + 1] = arr[high];
+        let arr[high] = temp;
+        return i + 1;
+    }
+
+    function Array mergesort(Array arr, int low, int high) {
+        var int pi;
+        let pi = (low + high) / 2;
+        if (low < high) {
+            let pi = Main.partition(arr, low, high);
+            do Main.mergesort(arr, low, pi - 1);
+            do Main.mergesort(arr, pi + 1, high);
+        }
+        return arr;
+    }
+
+}

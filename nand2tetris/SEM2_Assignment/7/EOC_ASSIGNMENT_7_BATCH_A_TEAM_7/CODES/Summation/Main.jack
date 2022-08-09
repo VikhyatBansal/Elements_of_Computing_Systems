@@ -1,0 +1,49 @@
+class Main {
+    function void main() {
+        var int n;
+        var int y;
+        var int i;
+        //var int sum;
+
+        let n = Keyboard.readInt("Enter the value of n:");
+        do Output.println();
+        
+        let y = 0;
+        if ((n<10) | (n=10)) {
+            
+                
+                let i = 0;
+                let y = 0;
+                
+                while (i>-1 & i<n) {
+                let i = i+1;
+                let y = y+i;
+                
+            }
+            do Output.printString("The value of y is:");
+            do Output.printInt(y);
+            do Output.println();
+            
+        }
+        
+        else {
+            let i = 0;
+            let y = 0;
+                         
+                while  (i>-1 & i<n) {
+                let i = i+1;
+                let y = y+(i*i);
+            }
+            do Output.printString("The value of y is:");
+            do Output.printInt(y);
+
+        }
+        return;
+        }
+        
+        
+}
+
+    
+    
+

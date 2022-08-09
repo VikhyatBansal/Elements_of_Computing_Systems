@@ -1,0 +1,59 @@
+class Main {
+    function void main() {
+        var int a, b, c;
+        var int x, y, z;
+        let x = 0;
+        let a = 1;
+        let b = 0;
+        do Output.printString("Counter Started: ");
+        do Output.println();
+        while (x<31) {
+            // do Output.moveCursor(a,b);
+            do Output.printInt(x);
+            do Output.println();
+            do Sys.wait(1000);
+            let x = x + 1;
+
+            if (x = 22) {
+                do Screen.clearScreen();
+
+            }  
+        }
+        do Screen.clearScreen();
+        let b = 0;
+        let a = 0;
+        do Output.moveCursor(a,b);
+         
+        while (x>30) {
+            let x = 0;
+            do Output.printString("Counter reset: ");
+            do Output.println();
+            while (x<31) {
+            // do Output.moveCursor(a,b);
+            do Output.printInt(x);
+            do Output.println();
+            do Sys.wait(1000);
+            let x = x + 1;
+            if (x = 22) {
+                do Screen.clearScreen();
+
+            }
+
+            if (x>30) {
+                do Screen.clearScreen();
+                let b = 0;
+                let a = 0;
+                do Output.moveCursor(a,b);
+
+            }
+
+        
+           
+            }
+         
+         
+    }
+    return;
+
+}
+}
