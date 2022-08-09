@@ -1,0 +1,47 @@
+class Main {
+  function void main() {
+    var int x;  //we created 4 integer variables namely a,b,c,neg
+    var int y;
+    var int z;
+    var int negative;
+
+    let x = Keyboard.readInt("Enter the first number: "); //we read the first number
+
+    let y = Keyboard.readInt("Enter the second number: "); //we read the second number
+    
+    if (y = 0) {
+      do Output.printString("Cannot divide by zero. Please enter a non-zero number. "); 
+      //if the second number is 0, we print this message
+       while(y=0) {
+        do Output.println();
+      let y = Keyboard.readInt("Enter second number: "); //we read the second number again
+    }
+    }
+   
+    let negative = 0; //we created a variable named neg
+    if (x < 0) { 
+      let negative = negative + 1; //if the first number is negative, we add 1 to the variable neg
+      let x = -x; //we make the first number positive
+    }
+    
+    if (y < 0) {
+      let negative = negative + 1; //if the second number is negative, we add 1 to the variable neg
+      let y = -y; //we make the second number positive
+    }
+    
+    let z = 0; //we created a variable named c
+    while ((x > y) | (x = y)) {
+      let x = x - y; //we subtract the first number from the second number
+      let z = z + 1; //we add 1 to the variable c
+    }
+    
+    do Output.printString("the Quotient which we will get is: ");
+    
+    if (negative = 1) {
+      do Output.printInt(-z); //if neg variable is 1 then only we print Quotient as negative
+    } else {
+      do Output.printInt(z);  //if neg variable is 0 then only we print Quotient as positive
+    }
+    return;
+  }
+}

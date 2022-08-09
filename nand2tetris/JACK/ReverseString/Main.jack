@@ -1,0 +1,93 @@
+// class Main{
+//     function void main(){
+//         var String a;
+//         var String str;
+//         var int i,j;
+//         var char ch;
+//         let a = Keyboard.readLine("Enter a string: ");
+//         do Output.println();
+//         // let b = Keyboard.readLine("Enter a string: ");
+//         // do Output.printString("String 1 before reversing is: ");
+//         // do Output.printString(a);
+//         // do Output.println();
+//         // do Output.printString("String 2 before reversing is: ");
+//         // do Output.printString(b);
+//         let i = 0;
+//         let j = (a.length()-1);
+//         while (i<a.length()){
+//             let ch = a.charAt(j);
+//             let str = str.appendChar(ch);
+//             let i = i + 1;
+//             let j = j - 1;
+//         }
+//         do Output.printString("String after reversing is: ");
+//         do Output.printString(str);
+
+//         return;
+//     }
+// }
+
+// class Main{
+//     function void main(){
+//         var String inputString;
+//         var int i, j, length;
+//         var char tmpi, tmpj;
+//         let inputString = Keyboard.readLine("String before reversing:");
+//         do Output.println();
+
+//         let length = inputString.length() - 1;
+//         let j = length;
+//         let i = 0;
+//         while(~(j = (length/2))){
+//           let tmpi = inputString.charAt(i);
+//           let tmpj = inputString.charAt(j);
+//           do inputString.setCharAt(i, tmpj);
+//           do inputString.setCharAt(j, tmpi);
+//           let j = j - 1;
+//           let i = i + 1;
+//         }
+//         do Output.printString("String after reversing is: ");
+//         do Output.printString(inputString);
+//         return;
+//     }
+// }
+
+class Main {
+     function void main() {
+     var char mpt1;
+     var char mpt2;
+     var int i,j;  // We took these 2 variable  integer symbols to perform in loop 
+     var String firstword,secondword,out1,out2;  // first 2 string variables store the input word we gives and the remaining 2 to store the reversed output of word
+
+   let firstword = Keyboard.readLine("firstword: ");
+   let secondword = Keyboard.readLine("secondword: ");
+   let out1 = String.new(firstword.length());
+   let out2 = String.new(secondword.length());
+	
+	do Output.println();
+   let i = firstword.length()-1;
+   while (i > 0)
+   {
+     let mpt1 = firstword.charAt(i);
+     do out1.appendChar(mpt1);
+     let i = i - 1;                   // This while loop is used to store each letter of the word in the reverse order 
+}
+      do out1.appendChar(firstword.charAt(i));
+	do Output.printString("Reversed firstword: ");	
+	do Output.printString(out1);
+      do Output.println();           // This is to print the reversed word which we stored in the out1
+
+ let j = secondword.length()-1;
+   while (j > 0)
+   {
+     let mpt2 = secondword.charAt(j);
+     do out2.appendChar(mpt2);
+     let j = j - 1;
+     
+}
+      do out2.appendChar(secondword.charAt(j));
+	do Output.printString("Reversed secondword: ");
+	do Output.printString(out2);                     //Same method with another word
+return;
+  }
+}

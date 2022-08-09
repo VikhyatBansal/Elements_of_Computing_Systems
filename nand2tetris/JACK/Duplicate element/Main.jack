@@ -1,0 +1,114 @@
+// class Main {
+//     function void main() {
+//         var Array a;
+//         var int length;
+//         var int i, j, k;
+
+// 	let length = Keyboard.readInt("Number of elements in the array: ");
+// 	let a = Array.new(length);
+// 	let i = 0;   
+//     do Output.println();
+
+// 	while (i < length) {
+// 	    let a[i] = Keyboard.readInt("Enter the numbers: ");
+// 	    let i = i + 1;
+// 	}
+//   do Output.println();
+
+//   let i = 0;
+//   let k = 1;
+  
+//   while(i < length){
+//     let j = i + 1;
+//     while(j < length){
+//       if(a[i] = a[j]){
+//         do Output.printString("The duplicate element is: ");
+//         do Output.printInt(a[i]);
+        
+//         let k = k + 1;
+//         do Output.println();
+//         do Output.printString("Number of times the element is repeated: ");
+//         do Output.printInt(k);
+//         do Output.println();
+//       }
+//       let j = j + 1;
+//     }
+//     let i = i + 1;
+//     let k = 1;
+//     do Output.println();
+//   }
+
+// 	return;
+//     }
+// }
+
+class Main {
+function void main() {
+var Array a;
+var int length;
+var int i;
+var int large;
+var int small;
+var int equal;
+var int count;
+var boolean k;
+var int j;
+var int q;
+
+let k = false;
+let length = Keyboard.readInt("Enter the length of the array: ");
+let a = Array.new(length);
+let i = 0;
+while (i < length) {
+let a[i] = Keyboard.readInt("Enter the next integer: ");
+let i = i + 1;
+}
+let k = Main.checkEqual(a, length);
+if (k) {
+  do Output.println();
+    do Output.printString("There are duplicate elements present in array.");
+    do Output.println();
+    }
+    return;
+}
+
+    
+   
+
+  function boolean checkEqual(Array a, int length){
+  var int i, j;
+  var boolean k;
+  var int count;
+  let k = false;
+  
+  let i = 0;
+  let j = 0;
+    while (i < length) {
+      let j = i + 1;
+      while(j <  length){
+        // if(i=j){} 
+        // else{
+          if(a[i] = a[j] ){
+            let k = true;
+            let count = count + 1;
+            do Output.printString("the duplicate element is: ");
+            do Output.printInt(a[i]);
+            do Output.println();
+            do Output.printString("Number of times the element is repeated: ");
+            do Output.printInt(count);
+            do Output.println();
+            
+          }
+          // }
+        let j = j + 1;
+        }
+        if(k){
+          return k;
+        }
+        let j = 0;
+        let i = i + 1;
+     }
+     return k;
+}
+}
+

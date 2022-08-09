@@ -1,0 +1,59 @@
+class Main {
+    function void main() {
+        var Array a;
+        var Array temp;
+        var int length;
+        var int i;
+        var int j;
+        var int k;
+
+        let length = Keyboard.readInt("Enter the length of the array: ");
+        let a = Array.new(length);
+        let temp = Array.new(length);
+        do Output.println();
+        
+       
+        while (i<length) {
+           let  a[i] = Keyboard.readInt("Enter the element: ");
+           let i = i+1;
+        
+        }
+        do Output.println();
+
+        let i = 0;
+        let j = length - 1;
+        while ((j>0) | (j=0)) {
+            let temp[i] = a[j];
+            let i = i+1;
+            let j = j-1;
+
+        }
+
+        
+        do Output.printString("Array before reversing is: ");
+        do Output.println();
+        let i = 0;
+        let k = length;
+        while (i<length) {
+            do Output.printInt(a[i]);
+            do Output.println();
+            let i = i+1;
+        }
+        do Output.println();
+        // do Output.printInt(a);
+        do Output.printString("Array after reversing is: ");
+        do Output.println();
+        let i = 0;
+        let k = length;
+        while (i<length) {
+            do Output.printInt(temp[i]);
+            do Output.println();
+            let i = i+1;
+        }
+        
+        return;
+
+
+        
+    }
+}

@@ -1,0 +1,11 @@
+class Main{
+   function void main() {
+      var int a; 
+      var int b;
+      let a = Keyboard.readInt("Enter the first number: ");
+      let b = Keyboard.readInt("Enter the second number: ");
+      do Output.printString("Divide: ");
+      do Output.printInt(Math.divide(a, b));
+      return;
+}
+}

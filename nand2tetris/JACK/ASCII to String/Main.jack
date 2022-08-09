@@ -1,0 +1,18 @@
+class Main {
+    function void main() {
+        var Char s;
+		var String str;
+		var int n,l;
+		let n = 0;
+
+		let l  = Keyboard.readInt("Length of String: ");
+		let str = String.new(l);
+		while (n<l){
+			let s  = Keyboard.readInt("Enter the ascii number: ");
+			let str=str.appendChar(s);
+			let n=n+1;
+		}
+		do Output.printString(str);
+		return;
+	}
+}
