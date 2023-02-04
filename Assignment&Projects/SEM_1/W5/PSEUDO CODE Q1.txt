@@ -1,0 +1,14 @@
+arr = 100
+n = 25
+i = 0
+
+LOOP:
+   if i = n  goto END      // when i reaches final iteration that is 25 it will stop the loop
+   RAM[arr+i] = -1             // each RAM address as an input is given as -1 as mentioned in Q
+   i = i+1                 // loop is created, iteration will increase by one from 0 to 24  and at iteration 25, loop will end
+   goto LOOP
+
+END:
+   Program Ends
+
+
